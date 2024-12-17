@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Александр Белоус - Фитнес Тренер</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css"> 
+</head>
+<body>
+    <!-- Навигационная панель -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Александр Белоус</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="#about">Обо мне</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#pricing">Услуги</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#why-me">Почему я?</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#articles">Полезные статьи</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Контакты</a></li>
+                </ul>
+                <button class="btn btn-outline-secondary ms-auto" id="theme-toggle">Светлый режим</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Заголовок с каруселью -->
+    <header class="bg-light py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <h1>Александр Белоус</h1>
+                    <h2>Персональный фитнес-тренер</h2>
+                </div>
+                <div class="col-md-6">
+                    <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="images/Без названия.jpg" class="d-block w-100" alt="Фотография 1">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="images/Без названия 2.jpg" class="d-block w-100" alt="Фотография 2">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="images/Без названия 3.jpg" class="d-block w-100" alt="Фотография 3">
+                            </div>
+                            <div class="carousel-inner">
+                                <div class="carousel-item">
+                                    <img src="images/Без названия 4.jpg" class="d-block w-100" alt="Фотография 4">
+                                </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Предыдущий</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Следующий</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Секция "Обо мне" -->
+    <section id="about">
+        <h2>Обо мне</h2>
+        <div class="content">
+            <div class="about-text">
+                <h3>Мой путь в фитнес</h3>
+                <p>Я начал заниматься фитнесом, когда понял, что здоровье — это самое главное. С тех пор моя жизнь изменилась, и я хочу помочь другим достичь своих целей.</p>
+            </div>
+            <div class="about-text">
+                <h3>Миссия</h3>
+                <p>Моя миссия — вдохновлять людей на здоровый образ жизни и помогать им достигать своих целей в фитнесе.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Услуги -->
+    <div id="pricing" class="pricing">
+        <div class="container">
+            <div class="row g-5 justify-content-center">
+                <div class="col-md-4">
+                    <div class="content text-center">
+                        <h4>Персональный</h4>
+                        <ul class="list-unstyled">
+                            <li><i class="la la-check-circle"></i> Ежемесячное сопровождение</li>
+                            <li><i class="la la-check-circle"></i> Связь 24/7</li>
+                            <li><i class="la la-check-circle"></i> Постоянный контроль питания</li>
+                            <li><i class="la la-check-circle"></i> Постановка техники онлайн</li>
+                        </ul>
+                        <h2>$40</h2>
+                        <a href="#contact" class="button">Записаться</a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="content text-center">
+                        <h4>Онлайн сопровождение</h4>
+                        <ul class="list-unstyled">
+                            <li><i class="la la-check-circle"></i> Ежемесячное сопровождение</li>
+                            <li><i class="la la-check-circle"></i> Постоянный контроль питания</li>
+                            <li><i class="la la-check-circle"></i> Индивидуальный план тренировок</li>
+                            <li><i class="la la-check-circle"></i> Видеозвонок для ваших вопросов</li>
+                        </ul>
+                        <h2>$45</h2>
+                        <a href="#contact" class="button">Записаться</a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="content text-center">
+                        <h4>Премиум</h4>
+                        <ul class="list-unstyled">
+                            <li><i class="la la-check-circle"></i> 5 офлайн тренировок в месяц</li>
+                            <li><i class="la la-check-circle"></i> Видеозвонки для обсуждения</li>
+                            <li><i class="la la-check-circle"></i> Индивидуальный план тренировок</li>
+                            <li><i class="la la-check-circle"></i> Контроль питания</li>
+                        </ul>
+                        <h2>$100</h2>
+                        <a href="#contact" class="button">Записаться</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- end Услуги -->
+
+
+    <!-- Секция "Почему я?" -->
+<section id="why-me" class="text-center">
+    <h2>Почему стоит выбрать меня?</h2>
+    <div class="content">
+        <ul class="list-unstyled">
+            <!-- Элементы с раскрывающимся текстом -->
+            <li onclick="toggleText(this)">
+                <strong>Индивидуальный подход</strong>
+                <p>Каждая тренировка и план питания разрабатываются индивидуально, с учетом ваших целей и предпочтений. Мы с вами создаем программу, которая поможет достичь максимальных результатов, обеспечивая поддержку и мотивацию на каждом этапе вашего пути к здоровью.</p>
+            </li>
+            <li onclick="toggleText(this)">
+                <strong>Мотивация и поддержка</strong>
+                <p>Я не только помогаю вам в тренажёрном зале, но и поддерживаю вас в повседневной жизни, обучая правильным привычкам питания и здоровому образу жизни. Моя цель — сделать ваш путь к фитнесу более комфортным и эффективным.</p>
+            </li>
+            <li onclick="toggleText(this)">
+                <strong>Реальные результаты</strong>
+                <p>Более 50 довольных клиентов достигли своих целей, благодаря индивидуальному подходу и тщательной разработке тренировочных программ и планов питания. Каждый из них получил поддержку и мотивацию на протяжении всего процесса, что помогло им преобразить свою физическую форму и уверенность в себе.</p>
+            </li>
+        </ul>
+    </div>
+</section>
+<!-- end Секция "Почему я?" -->
+    <section id="articles"></section>
+    <h2>Полезные статьи</h2>
+    <div class="content">
+        <div class="about-text">
+            <h3>Мотивация в спорте</h3>
+            <p>Как сохранять мотивацию на пути к своей цели: важно помнить, что каждый шаг вперед — это уже успех. Постоянно ставьте перед собой маленькие, достижимые цели, и не забывайте отмечать свои достижения.</p>
+        </div>
+        <div class="about-text">
+            <h3>Питание для спортсменов</h3>
+            <p>Что нужно знать о питании для достижения максимальных результатов: правильное питание — залог успешных тренировок. Убедитесь, что ваш рацион богат белками, углеводами и полезными жирами.</p>
+        </div>
+        <div class="about-text">
+            <h3>Тренировки на свежем воздухе</h3>
+            <p>Преимущества тренировок на улице: занятия на свежем воздухе не только улучшают физическую форму, но и положительно влияют на психологическое состояние. Наслаждайтесь природой во время тренировок!</p>
+        </div>
+    </div>
+</section>
+
+<section id="calculator"> 
+    <h2>Калькулятор ИМТ</h2> 
+    <div class="calculator">
+<input type="number" id="weight" placeholder="Ваш вес (кг)"> 
+        <input type="number" id="height" placeholder="Ваш рост (см)"> 
+        <button onclick="calculateBMI()">Рассчитать ИМТ</button> 
+        <p id="result"></p> 
+    </div> 
+</section> 
+
+<section id="contact"> 
+    <h2>Контакты</h2> 
+    <div class="content"> 
+        <div class="about-text"> 
+            <h3>Связаться со мной</h3> 
+            <p>Email: alexsatisfying92@mail.ru</p> 
+            <p>Телефон: +7 (977) 602-88-08</p> 
+             <p><a href="https://t.me/whitebuilder" class="button">Написать в Telegram</a></p> 
+        </div> 
+    </div> 
+</section> 
+
+<footer> 
+    <p>&copy; 2024 Александр Белоус - Фитнес-тренер</p> 
+</footer> 
+
+<script src="script.js"></script> <!-- Подключение JavaScript -->
+</body>
+</html>
+
+    <!-- Подключение Bootstrap и кастомного JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script> <!-- Скрипт с логикой -->
+</body>
+</html>
+
+    

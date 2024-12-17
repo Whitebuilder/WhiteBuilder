@@ -1,0 +1,473 @@
+/* Общее оформление */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    padding-top: 60px;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Темная тема */
+body.dark-theme {
+    background-color: #181818;
+    color: #f4f4f4;
+}
+
+/* Навигация в светлой теме */
+nav {
+    padding: 10px 0;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    background-color: white;
+    color: black;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Навигация в тёмной теме */
+body.dark-theme nav {
+    background-color: #333;
+    color: white;
+}
+
+/* Навигация */
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 1.2em;
+    transition: color 0.3s ease-in-out;
+}
+
+nav a:hover {
+    color: #e94e77;
+}
+
+nav.dark-theme a:hover {
+    color: #f4a261; /* Изменение цвета при наведении в темной теме */
+}
+/* ------------------------------
+   Общие стили для навигации
+------------------------------- */
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 1.2em;
+    transition: color 0.3s ease-in-out;
+}
+
+nav a:hover {
+    color: #e94e77; /* Розовый цвет при наведении в светлой теме */
+}
+
+/* Светлая тема (по умолчанию) */
+.navbar-light {
+    background-color: #f8f9fa; /* Светлый фон */
+    color: black; /* Чёрный текст */
+}
+
+.navbar-light .navbar-brand {
+    color: black; /* Цвет заголовка */
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: black; /* Цвет ссылок */
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+    color: #f7f7f7; /* Белый цвет при наведении */
+}
+
+/* ------------------------------
+   Тёмная тема
+------------------------------- */
+body.dark-theme nav {
+    background-color: #333; /* Тёмный фон */
+    color: white; /* Белый текст */
+}
+
+body.dark-theme .navbar-light .navbar-brand {
+    color: #e94e77; /* Розовый заголовок */
+}
+
+body.dark-theme .navbar-light .navbar-nav .nav-link {
+    color: #f4f4f4; /* Белый текст для ссылок */
+}
+
+body.dark-theme .navbar-light .navbar-nav .nav-link:hover {
+    color: #000000; /* Чёрный текст при наведении */
+}
+
+/* ------------------------------
+   Стили для фиксированной навигации
+------------------------------- */
+.navbar-fixed {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 99;
+    background: #f8f9fa; /* Светлый фон по умолчанию */
+    transition: background 0.3s ease-in-out;
+}
+
+/* Фон для фиксированной навигации в тёмной теме */
+body.dark-theme .navbar-fixed {
+    background: #333; /* Тёмный фон для фиксированной навигации */
+}
+
+/* ------------------------------
+   Кнопка переключения темы
+------------------------------- */
+#themeToggle {
+    color: black;
+    background: none;
+    border: 1px solid black;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+body.dark-theme #themeToggle {
+    color: white;
+    border-color: white;
+}
+/* Фиолетовая кнопка переключателя */
+.purple-switch {
+    background-color: #e94e77; /* Фиолетовый цвет */
+    border-color: #e94e77;
+}
+
+.purple-switch:checked {
+    background-color: #e94e77; /* Более тёмный фиолетовый, если включено */
+    border-color: #e94e77;
+}
+
+/* Чтобы текст и переключатель хорошо смотрелись вместе */
+.form-check-label {
+    color: #e94e77; /* Фиолетовый текст */
+    font-weight: bold;
+}
+/* Заголовки */
+header {
+    background: linear-gradient(135deg, #e94e77, #2c3e50);
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px;
+    position: relative;
+    z-index: 1;
+    overflow: hidden; /* Чтобы карусель не выходила за пределы */
+    transition: background 0.3s ease;
+}
+
+header.dark-theme {
+    background: linear-gradient(135deg, #333, #555);
+}
+
+header h1, header h2 {
+    color: #000;
+    animation: slideInLeft 2s ease-in-out;
+}
+
+header.dark-theme h1, header.dark-theme h2 {
+    color: #fff;
+}
+
+/* Стиль для контейнера карусели */
+header .slideshow-container {
+    position: relative;
+    width: 100%;
+    height: 100%; /* Ограничиваем высоту контейнера */
+    overflow: hidden; /* Скрываем части изображений, выходящие за пределы */
+}
+
+/* Для изображений внутри карусели */
+header .mySlides {
+    width: 100%;
+    height: 100%; /* Растягиваем изображение по высоте */
+    object-fit: cover; /* Сохраняем пропорции, изображение не искажается */
+}
+
+/* Для placeholder картинки */
+header .photo-placeholder {
+    width: 400px;
+    max-height: 400px; /* Ограничиваем максимальную высоту */
+    background-color: #eaeaea;
+    border: 2px solid #ccc;
+    object-fit: cover;
+    overflow: hidden; /* Чтобы изображение не выходило за пределы */
+    animation: fadeIn 2s ease-in-out;
+}
+
+/* Анимации */
+@keyframes slideInLeft {
+    from { transform: translateX(-100px); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeInSection {
+    from { opacity: 0; transform: translateY(50px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Слайд-шоу */
+.slideshow-container {
+    position: relative;
+    width: 100%;
+    max-width: 350px;
+}
+
+.mySlides {
+    display: none;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+/* Услуги */
+.pricing {
+    padding-top: 140px;
+  }
+  .pricing .content {
+    border: 2px solid #e94e77;
+    padding: 40px;
+  }
+  .pricing .content ul {
+    margin-bottom: 30px;
+  }
+  .pricing .content ul li {
+    padding: 8px 0;
+  }
+  .pricing .content ul li i {
+    color: #e94e77;
+    margin-right: 15px;
+  }
+  .services {
+    display: flex;
+    justify-content: center; /* Выравнивание по горизонтали */
+    align-items: center; /* Выравнивание по вертикали */
+    gap: 20px; /* Расстояние между элементами */
+    flex-wrap: wrap; /* Разрешить перенос элементов на следующую строку, если не помещаются */
+    padding: 20px;
+}
+
+.service-item {
+    background-color: #e94e77;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    font-size: 1.2em;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.service-item:hover {
+    transform: translateY(-5px);
+}
+/* Разделы */
+section {
+    padding: 50px 20px;
+    opacity: 0;
+    animation: fadeInSection 1.5s forwards;
+}
+
+section h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin-top: 40px;
+}
+
+/* About text */
+.about-text, .why-me-text {
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.about-text:hover, .why-me-text:hover {
+    transform: translateY(-5px);
+}
+
+/* Тема для темной темы */
+body.dark-theme .about-text, body.dark-theme .why-me-text {
+    background-color: #333;
+    color: #f4f4f4;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+}
+
+ul li {
+    background: #e94e77;
+    color: white;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+ul li:hover {
+    transform: translateY(-5px);
+}
+
+ul li p {
+    display: none;
+    margin-top: 10px;
+    color: white;
+    transition: opacity 0.3s ease-in-out;
+}
+
+ul li.active p {
+    display: block;
+    opacity: 1;
+}
+
+/* Кнопки */
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #e94e77;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2em;
+    border-radius: 5px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.button:hover {
+    background-color: #d83e67;
+}
+
+/* Футер */
+footer {
+    background-color: #111;
+    color: #aaa;
+    padding: 20px;
+    text-align: center;
+}
+
+footer.dark-theme {
+    background-color: #333;
+    color: #fff;
+}
+
+/* Калькулятор */
+.calculator {
+    margin-top: 40px;
+}
+
+.calculator input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.calculator button {
+    width: 100%;
+    padding: 10px;
+    background-color: #e94e77;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.calculator button:hover {
+    background-color: #d83e67;
+}
+
+/* Медиа-запросы для адаптации под мобильные устройства */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        height: auto;
+        text-align: center;
+    }
+    header .photo-placeholder {
+        width: 100%;
+        height: auto;
+    }
+    .header-content h1 {
+        font-size: 2.5em;
+    }
+    .header-content h2 {
+        font-size: 1.5em;
+    }
+    .slideshow-container {
+        max-width: 100%;
+    }
+    .about-text, .why-me-text {
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    nav a {
+        font-size: 1em;
+        margin: 0 10px;
+    }
+    header .header-content h1 {
+        font-size: 2em;
+    }
+    header .header-content h2 {
+        font-size: 1.2em;
+    }
+    .slideshow-container {
+        max-width: 100%;
+    }
+    .about-text, .why-me-text {
+        padding: 10px;
+    }
+    section h2 {
+        font-size: 1.8em;
+    }
+}
+
+
+
+
+
